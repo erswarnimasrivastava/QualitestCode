@@ -1,0 +1,49 @@
+{
+  "name": "fbds_e2e_cypress",
+  "version": "1.0.0",
+  "description": "e2e tests task1",
+  "main": "cypress.config.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "npm run ui-test-allure",
+    "ui-test-allure": "cypress run --browser chrome --env allure=true --spec ./cypress/e2e/feature_files/demo/cart.feature ",
+    "allure:report": "allure generate allure-results --clean -o allure-reports"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Swarnima Srivastava",
+  "license": "ISC",
+  "homepage": "https://github.com/bbc/pcs-fbds-end-to-end-tests#readme",
+  "devDependencies": {
+    "@aws-sdk/client-api-gateway": "^3.325.0",
+    "@aws-sdk/client-dynamodb": "^3.222.0",
+    "@aws-sdk/client-lambda": "^3.222.0",
+    "@aws-sdk/client-s3": "^3.222.0",
+    "@aws-sdk/client-sts": "^3.222.0",
+    "@aws-sdk/lib-dynamodb": "^3.222.0",
+    "@badeball/cypress-cucumber-preprocessor": "^14.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "@splunkdev/cloud-sdk": "^16.0.0-beta6",
+    "cypress": "^11.2.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-otp": "^1.0.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "node-forge": "^1.3.1",
+    "splunk-sdk": "^1.12.1",
+    "webpack": "^5.75.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/**/*.{js,ts}"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^8.11.1",
+    "cypress-plugin-api": "^2.10.3",
+    "cypress-xpath": "^2.0.1"
+  }
+}
