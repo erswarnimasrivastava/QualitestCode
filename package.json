@@ -4,10 +4,6 @@
   "description": "e2e tests task1",
   "main": "cypress.config.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "test": "npm run ui-test-allure",
-    "ui-test-allure": "cypress run --browser chrome --env allure=true --spec ./cypress/e2e/feature_files/demo/cart.feature ",
-    "allure:report": "allure generate allure-results --clean -o allure-reports"
   },
   "repository": {
     "type": "git",
