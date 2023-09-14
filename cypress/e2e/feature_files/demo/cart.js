@@ -48,8 +48,8 @@ When("I search for lowest price item", async () => {
                 });
         })
         .then(() => {
-            // Now you can find the smallest price among all the prices
-            // This code block will run after all elements have been processed
+            // find the smallest price among all the prices
+          
             const prices = [];
             cy.xpath("//td[@class='product-price']//span[@class='woocommerce-Price-amount amount']")
                 .invoke('text')
