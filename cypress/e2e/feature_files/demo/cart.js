@@ -42,8 +42,6 @@ When("I search for lowest price item", async () => {
                 .invoke('text')
                 .then((priceText) => {
                     price = parseInt(priceText.trim().replace('$', ''), 10);
-
-                    // You can log or assert each price as needed
                     cy.log('Price: ' + price);
                 });
         })
