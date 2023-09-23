@@ -18,7 +18,7 @@ This will copy your repository to your local machine.
 ## Running your tests
 Run the below command in your terminal to install the node packages
 ```
-npm install
+npm install cypress
 ```
 To open Cypress run 
 ```
